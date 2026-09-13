@@ -1,7 +1,10 @@
 import json
 import os
 import sys
+from functools import partial
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from threading import Thread
 from types import SimpleNamespace
 
 import gi
@@ -83,6 +86,46 @@ def collect(candidate, published, refs, *, skip_missing_candidate_app_ids=frozen
         timeout_seconds=10,
         skip_missing_candidate_app_ids=skip_missing_candidate_app_ids,
     )
+
+
+def test_manifest_collection_with_ostree_header_gate(source_repos):
+    candidate, published = source_repos
+    ref_name = "app/org.example.App/x86_64/stable"
+    candidate_checksum = candidate.commit(ref_name, {"version": 2})
+    published.commit(ref_name, {"version": 1})
+
+    class HeaderGateHandler(SimpleHTTPRequestHandler):
+        def do_GET(self):
+            if (
+                "/objects/" in self.path
+                and "libostree/" in self.headers.get("User-Agent", "").lower()
+                and not self.headers.get("Flatpak-Ref")
+            ):
+                self.send_error(403)
+                return
+            super().do_GET()
+
+    server = ThreadingHTTPServer(
+        ("127.0.0.1", 0),
+        partial(HeaderGateHandler, directory=str(candidate.path.parent)),
+    )
+    thread = Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        base_url = f"http://127.0.0.1:{server.server_port}"
+        pairs = ostree_manifest.collect_manifest_pairs(
+            f"{base_url}/{candidate.path.name}",
+            f"{base_url}/{published.path.name}",
+            [candidate_ref(candidate_checksum)],
+            timeout_seconds=10,
+        )
+        assert pairs[0].candidate_manifest == {"version": 2}
+        assert pairs[0].published_manifest == {"version": 1}
+        assert pairs[0].changed is True
+    finally:
+        server.shutdown()
+        thread.join()
+        server.server_close()
 
 
 def test_candidate_and_published_manifests_are_read_with_exact_pull_options(

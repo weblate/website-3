@@ -319,6 +319,7 @@ def _pull_manifest_paths(
             "depth": GLib.Variant("i", 0),
             "disable-static-deltas": GLib.Variant("b", True),
             "n-network-retries": GLib.Variant("u", 1),
+            "http-headers": GLib.Variant("a(ss)", [("User-Agent", "flathub-backend")]),
         },
     )
     repo.pull_with_options(remote_name, options, None, cancellable)
