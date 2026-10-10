@@ -34,7 +34,7 @@
   "log-out": "登出",
   "network-error-try-again": "发生网络错误。请重试。",
   "error-already-logged-in": "所选账号已经登录。",
-  "installs-over-time": "随时间安装量",
+  "installs-over-time": "安装量变化",
   "loading-user-apps": "正在加载用户应用…",
   "authored-apps": "创作的应用",
   "app-logo": "{app_name} 徽标",
@@ -42,7 +42,7 @@
   "count-downloads": "总下载量",
   "since": "始于",
   "downloads-per-country": "国家/地区下载量分布",
-  "downloads-over-time": "随时间下载量",
+  "downloads-over-time": "下载量变化",
   "home": "主页",
   "flathub-description": "查找和安装成百上千用于 Linux 的应用和游戏。享用 Firefox, Telegram, RetroArch, GIMP 和更多！",
   "subscribe": "订阅",
@@ -888,7 +888,6 @@
   "display-name-invalid": "输入 1-100 个字符的显示名称，要求至少一个可见字符，没有控制字符或文本方向字符。",
   "save": "保存",
   "email-login-with-email": "用电子邮件登录",
-  "email-login-log-in-with-email": "用电子邮件登录",
   "email-login-other-methods": "其他登录方式",
   "email-login-email-address": "电子邮件地址",
   "email-login-send-link": "用电子邮件给我发送一个登录链接",
@@ -904,7 +903,7 @@
   "verified-email": "已验证电子邮件地址",
   "email-login-replaced": "对于该账户，提供商登录已永久性替换了电子邮件登录。",
   "chart-description": "显示 {chart} 的图表。悬停或聚焦数据点获取精确数值。",
-  "build-duration-over-time": "版本持续时间",
+  "build-duration-over-time": "版本持续时间变化",
   "duration-minutes": "时长（分钟）",
   "category": "类别",
   "operating-system": "操作系统",
@@ -922,5 +921,15 @@
       "warning-eol": "将用下方消息将该应用标记为 EOL。",
       "acknowledgment": "我理解存档 <app>{app_id}</app> 的影响"
     }
-  }
+  },
+  "view-builds": "查看版本",
+  "transaction-cancelled-description": "此交易被取消。未完成付款。",
+  "transaction-successful": "付款完成",
+  "transaction-successful-description": "成功完成了付款。交易详细信息见下方。",
+  "x-installs": "{x} 次安装",
+  "user-login-heading": "登录 Flathub",
+  "user-login-intro": "输入电子邮件地址，我们会给你发送登录链接。无需密码。",
+  "user-login-unavailable": "电子邮件登录当前不可用。请稍候再试。",
+  "developer-login-hint-link": "在找 <link>开发者登录</link> 吗？",
+  "developer-login-title": "开发者登录"
 }

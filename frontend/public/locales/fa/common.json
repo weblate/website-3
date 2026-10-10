@@ -507,7 +507,7 @@
     "runtime-version": "زمان اجرا: {version}"
   },
   "nothing-to-do": "کاری برای انجام نیست",
-  "do-you-really-want-to-archive-app": "مطمئنید؟ این کار ژتون‌های بارگذاری را نامعتبر کرده و برنامه را بایگانی می‌کند.",
+  "do-you-really-want-to-archive-app": "بازبینی تأثیرات زیر پیش از بایگانی کردن.",
   "stripe-error-expired_card": "کارت منقضی شده. تاریخ انقضا را بررسی کرده یا کارتی دیگر را استفاده کنید.",
   "unverified": "تأیید نشده",
   "new": "جدید",
@@ -888,7 +888,6 @@
   "display-name-updated": "نام نمایشی به‌روز شد",
   "display-name-invalid": "ورود نامی نمایشی از ۱ تا ۱۰۰ نویسه با لااقل یم نویسهٔ نمایان و بدون نویسه‌های واپایش جهت متن.",
   "email-login-with-email": "ورود با رایانامه",
-  "email-login-log-in-with-email": "ورود با رایانامه",
   "email-login-other-methods": "دیگر روش‌های ورود",
   "email-login-email-address": "نشانی رایانامه",
   "email-login-send-link": "رایانامه کردن پیوند ورود",
@@ -902,5 +901,35 @@
   "email-login-session-conflict": "از پیش به عنوان کاربری دیگر در این مرورگر وارد شده‌اید. خروج در صورت تمایل به استفاده از این پیوند.",
   "email-login-oauth-upgrade-required": "این کنش نیازمند حساب فراهم‌کننده است. پیوند گیت‌هاب، گیت‌لب، گنوم یا کی‌دی‌ای در تنظیمات برای ادامه.",
   "verified-email": "رایانامهٔ تأیید شده",
-  "email-login-replaced": "ورود رایانامه‌ای این حساب برای همیشه با ورود فراهم‌کننده جایگزین شده."
+  "email-login-replaced": "ورود رایانامه‌ای این حساب برای همیشه با ورود فراهم‌کننده جایگزین شده.",
+  "chart-description": "نمودار نشان دهندهٔ {chart}. تمرکز روی نقطهٔ داده با نگه داشتن برای مقدارهای دقیق.",
+  "build-duration-over-time": "مدّت ساخت در طول زمان",
+  "duration-minutes": "مدّت (دقیقه)",
+  "category": "دسته",
+  "operating-system": "سیستم‌عامل",
+  "flatpak-version": "نگارش فلت‌پک",
+  "share-of-installs": "سهم نصب‌ها",
+  "view-builds": "دیدن ساخت‌ها",
+  "transaction-cancelled-description": "تراکنش لغو شد. هیچ پرداختی کامل نشد.",
+  "transaction-successful": "پرداخت کامل شد",
+  "transaction-successful-description": "پرداختتان با موفّقیت کامل شد. جزییات تراکنش در زیر آمده.",
+  "x-installs": "{x} نصب",
+  "danger-zone-confirmation": {
+    "switch": {
+      "warning-title": "این تغییر بازگشت‌پذیر نیست",
+      "warning-consequence": "این کاره با تعویض کردن برای همیشه به بارگذاری مستقیم تغییر خواهد کرد.",
+      "acknowledgment": "مي‌فهمم که تعویض کردن <app>{app_id}</app> به بارگیری مستقیم بازگشت‌پذیر نیست"
+    },
+    "archive": {
+      "warning-title": "بایگانی کردن روی این کاره و ناشرانش تأثیر می‌گذارد",
+      "warning-tokens": "همهٔ ژتون‌های بارگذاری فعّال این کاره نامعتبر خواهند شد.",
+      "warning-eol": "این کاره با پیام زیر به عنوان «پایان عمر» علامت خواهد خورد.",
+      "acknowledgment": "تأثیرات بایگانی کرد <app>{app_id}</app> را می‌فهمم"
+    }
+  },
+  "user-login-heading": "ورود به فلت‌هاب",
+  "user-login-intro": "ورود رایانامه‌تان برای فرستادن پیوند ورود. نیازی به گذرواژه نیست.",
+  "user-login-unavailable": "در حال حاضر ورود با رایانه ممکن نیست. لطفاً بعداً دوباره تلاش کنید.",
+  "developer-login-hint-link": "به دنبال <link>ورود توسعه‌دهنده</link> می‌گردید؟",
+  "developer-login-title": "ورود توسعه‌دهنده"
 }
