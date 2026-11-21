@@ -725,7 +725,11 @@
     "all-categories": "显示所有分类",
     "award-guide": "我们如何选择赢家",
     "more-downloads": "另 {count, number} 次下载",
-    "arrivals": "{year} 年 {count, number} 个应用加入了 Flathub。"
+    "arrivals": "{year} 年 {count, number} 个应用加入了 Flathub。",
+    "meet-arrivals": "在它们中：",
+    "previous-rank": "{year} 年第 {rank, number} 名",
+    "category-gain": "增加最多： <link>{app}</link> （+{count, number} 次下载）",
+    "outside-previous-top-ten": "不在去年的 top 10 当中"
   },
   "year-in-review-banner": {
     "description": "重温年度热门应用和趋势",
@@ -1021,7 +1025,10 @@
     "set-up-payments": "设置付款",
     "uploads-description": "创建上传令牌来从开发工具或 CI 发布版本。在此管理和撤销现有令牌。",
     "archive-description": "撤销所有上传令牌并标记该程序为 EOL。可以给现有用户提供一条消息和一个替代品。",
-    "verification-description": "向用户显示该程序由其开发者批准。在下面选择一种方式来证明你控制其域名或源码托管账户。阅读 <doclink>验证指南</doclink> 获取详细信息。"
+    "verification-description": "向用户显示该程序由其开发者批准。在下面选择一种方式来证明你控制其域名或源码托管账户。阅读 <doclink>验证指南</doclink> 获取详细信息。",
+    "app-share-after-fees": "费用后的应用份额：{percentage}",
+    "payments-owner-only": "只有为这个应用设立付款的账户的账户可以更改其付款设置。",
+    "payments-not-configured": "还没有为这个应用设立付款。"
   },
   "moderation-approved-on": "批准于 {handledAt} ({handledAtRel})",
   "moderation-rejected-on": "拒绝于 {handledAt} ({handledAtRel})",
